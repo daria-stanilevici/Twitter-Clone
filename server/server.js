@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000;
 
-mongoose.connect('mongodb+srv://daria:daria@twittercluster.7shaxg6.mongodb.net/', {
+mongoose.connect('mongodb+srv://daria:<password>@twittercluster.7shaxg6.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

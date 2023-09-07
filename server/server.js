@@ -23,7 +23,6 @@ const User = mongoose.model('User', {
   password: String,
 });
 
-// Registration Route
 app.post('/api/users/register', async (req, res) => {
   try {
     const { username, email, password } = req.body;

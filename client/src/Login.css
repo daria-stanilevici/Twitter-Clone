@@ -1,0 +1,81 @@
+:root {
+    --black: #060808;
+    --white: #e7e9ea;
+    --grey: #64696d;
+    --dark-gray: #242d34;
+    --blue: #1986cf;
+}
+
+body {
+    background-color: var(--dark-gray);
+    font-family: Arial, sans-serif;
+    color: var(--white);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 20px;
+}
+
+.form-container {
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid var(--black);
+    background-color: var(--black);
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px solid var(--dark-gray);
+    background-color: var(--black);
+    color: var(--white);
+}
+
+input[type="submit"] {
+    background-color: var(--black);
+    border-radius: 30px;
+    color: var(--white);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+link {
+    color: var(--blue);   
+}
+
+.twitter-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+.text {
+    color: var(--grey);
+  }
+
+.buttons {
+    background-color: var(--white);
+    color: var(--dark-gray);
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-weight: 800;
+    margin-top: 20px;
+    cursor: pointer;
+}

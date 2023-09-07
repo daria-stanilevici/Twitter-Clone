@@ -10,6 +10,7 @@ body {
     background-color: var(--dark-gray);
     font-family: Arial, sans-serif;
     color: var(--white);
+    margin: 0;
 }
 
 .wrapper {
@@ -25,10 +26,8 @@ body {
     padding: 20px;
     width: 80%;
     max-width: 500px;
-    border: 1px solid var(--black);
     background-color: var(--black);
     text-align: center;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 form {

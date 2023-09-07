@@ -18,7 +18,6 @@ mongoose.connect('mongodb+srv://daria:daria@twittercluster.7shaxg6.mongodb.net/'
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
-// Registration and Login Routes
 app.use('/api/users', userRoutes);
 
 app.listen(5000, () => {

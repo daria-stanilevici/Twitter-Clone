@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-function Register() {
+function Login() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
-    username: '',
     email: '',
     password: '',
   });
@@ -20,25 +21,29 @@ function Register() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/users/register', formData);
+      const response = await axios.post('http://localhost:5000/api/users/login', formData);
 
       setMessage(response.data.message);
+
+      // After successful login and registration check, navigate to the /home route
+      if (response.data.message === 'Login successful') {
+        // Check user registration on the server
+        const registrationResponse = await axios.post('http://localhost:5000/api/users/check-registration', { email: formData.email });
+
+        if (registrationResponse.data.isRegistered) {
+          navigate('/');
+        }
+      }
     } catch (error) {
-      console.error('Registration failed:', error);
-      setMessage('Registration failed');
+      console.error('Login failed:', error);
+      setMessage('Login failed');
     }
   };
 
   return (
     <div>
-      <h2>Register</h2>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          onChange={handleChange}
-        />
         <input
           type="email"
           name="email"
@@ -51,15 +56,14 @@ function Register() {
           placeholder="Password"
           onChange={handleChange}
         />
-        <button type="submit">Register</button>
+        <button type="submit">Login</button>
       </form>
       <p>{message}</p>
       <p>
-        Already have an account?{' '}
-        <Link to="/login">Login</Link>
+        Don't have an account? <Link to="/register">Register</Link>
       </p>
     </div>
   );
 }
 
-export default Register;
+export default Login;

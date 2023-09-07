@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://daria:daria@twittercluster.7shaxg6.mongodb.net/', {
+mongoose.connect('mongodb+srv://daria:<password>@twittercluster.7shaxg6.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

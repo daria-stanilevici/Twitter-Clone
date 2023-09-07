@@ -56,10 +56,6 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-link {
-    color: var(--blue);   
-}
-
 .twitter-logo {
     width: 50px;
     height: 50px;
@@ -67,7 +63,12 @@ link {
 
 .text {
     color: var(--grey);
-  }
+}
+  
+.link {
+    color: var(--blue);
+    text-decoration: none;
+}
 
 .buttons {
     background-color: var(--white);

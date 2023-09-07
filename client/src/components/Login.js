@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import '../Login.css';A
+import '../Login.css';
 
 function Login() {
   const navigate = useNavigate();

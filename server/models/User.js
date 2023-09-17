@@ -15,6 +15,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  profilePic: { 
+    type: String, 
+    default: "/images/profilePic.png" 
+  },
 });
 
 module.exports = mongoose.model('User', userSchema);

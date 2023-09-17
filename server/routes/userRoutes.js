@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 
-// Registration Route
 router.post('/register', async (req, res) => {
   const { username, email, password } = req.body;
 
@@ -16,7 +15,7 @@ router.post('/register', async (req, res) => {
     const newUser = new User({
       username,
       email,
-      password, // Note: Password should be hashed for production use.
+      password,
     });
 
     await newUser.save();
@@ -28,7 +27,6 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// Login Route
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
@@ -50,14 +48,12 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Check Registration Route
 router.post('/check-registration', async (req, res) => {
   const { email } = req.body;
 
   try {
     const existingUser = await User.findOne({ email });
 
-    // Check if a user with the provided email exists
     if (existingUser) {
       return res.status(200).json({ isRegistered: true });
     } else {

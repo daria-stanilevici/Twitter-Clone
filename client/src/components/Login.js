@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import '../Login.css';
+import '../login.css';
 
 function Login() {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ function Login() {
   };
 
   return (
-    <div className="wrapper login-container">
+    <div className="wrapper sign-container">
       <div className="form-container login-form">
       <img src="https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0.jpg" alt="Twitter Logo" className="twitter-logo" />  
         <h2>Sign in to X</h2>
@@ -48,7 +48,7 @@ function Login() {
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Email address"
             onChange={handleChange}
           />
           <input

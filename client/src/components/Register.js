@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import '../Login.css';
+import '../login.css';
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -31,7 +31,7 @@ function Register() {
   };
 
   return (
-    <div className="wrapper register-container">
+    <div className="wrapper sign-container">
       <div className="form-container register-form">
       <img src="https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0.jpg" alt="Twitter Logo" className="twitter-logo" />
         <h2>Join X today</h2>
@@ -45,7 +45,7 @@ function Register() {
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Email address"
             onChange={handleChange}
           />
           <input

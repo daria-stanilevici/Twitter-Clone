@@ -1,40 +1,49 @@
 import React from 'react';
-import './Home.css';
+import '../home.css';
+
 function Home() {
   return (
-    <div className="wrapper">
-      <div className="row">
-        <nav className="col-2">
-          <a className="logo" href="/">
-            <faXTwitter/>
+    <div className='wrapper'>
+      <div className='row'>
+        <nav className='col-2'>
+          <a href="/">
+            <i className="fa-brands fa-x-twitter"></i>
           </a>
           <a href="/">
-            <faHouse/>
-            <span>Home</span>
+            <i className="fa-solid fa-house"></i>
+            <span style={{ fontWeight: 'bold' }}>Home</span>
           </a>
+
           <a href="/search">
-            <faMagnifyingGlass />
+            <i className="fas fa-search"></i>
             <span>Explore</span>
           </a>
+
           <a href="/notifications">
-            <faBell />
+            <i className="fa-regular fa-bell"></i>
             <span>Notifications</span>
           </a>
           <a href="/messages">
-            <faEnvelope />
+            <i className="fa-regular fa-envelope"></i>
             <span>Messages</span>
           </a>
           <a href="/profile">
-            <faUser />
+            <i className="fa-regular fa-user"></i>
             <span>Profile</span>
           </a>
           <a href="/logout">
-            <faRightFromBracket />
+            <i className="fas fa-sign-out-alt"></i>
             <span>Exit</span>
           </a>
         </nav>
-        <div className="mainSectionContainer col-10 col-md-8 col-lg-6"></div>
-        <div className="d-none d-md-block col-md-2 col-lg-4"></div>
+
+        <div className='mainSectionContainer col-10 col-md-8 col-lg-6'>
+          <span>Main Section</span>
+        </div>
+
+        <div className='d-none d-md-block col-md-2 col-lg-4'>
+          <span>Third Column</span>
+        </div>
       </div>
     </div>
   );

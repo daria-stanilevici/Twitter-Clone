@@ -6,9 +6,13 @@ root {
     --black: #060808;
     --white: #e7e9ea;
     --grey: #64696d;
-    --dark-gray: #242d34;
-    --dark-blue: #0f4e78;
+    --dark-grey: #242d34;
     --blue: #1986cf;
+}
+
+* {
+    background-color: var(--black);
+    outline: none;
 }
 
 h1 {
@@ -87,6 +91,7 @@ nav a:hover {
     border: none;
     resize: none;
     font-size: 20px;
+    color: var(--white);
 }
 
 .textAreaContainer {
@@ -104,7 +109,7 @@ nav a:hover {
 
 .submitButton:disabled {
     color: var(--grey);
-    border-color: var(--dark-blue);
+    background-color: #0f4e78;
     border: none;
     border-radius: 30px;
     padding: 5px 20px;

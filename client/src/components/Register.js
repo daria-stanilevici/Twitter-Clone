@@ -33,35 +33,29 @@ function Register() {
   return (
     <div className="wrapper sign-container">
       <div className="form-container register-form">
-      <img src="https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0.jpg" alt="Twitter Logo" className="twitter-logo" />
+        <img src="https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0.jpg" alt="Twitter Logo" className="twitter-logo" />
         <h2>Join X today</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             name="username"
             placeholder="Username"
-            onChange={handleChange}
-          />
+            onChange={handleChange}/>
           <input
             type="email"
             name="email"
             placeholder="Email address"
-            onChange={handleChange}
-          />
+            onChange={handleChange}/>
           <input
             type="password"
             name="password"
             placeholder="Password"
-            onChange={handleChange}
-          />
+            onChange={handleChange}/>
           <button type="submit" className="buttons">Create account</button>
         </form>
         <p>{message}</p>
-        <p className="text">
-            Already have an account?{' '}
-            <Link to="/login" className='link'>
-                Log in
-            </Link>
+        <p className="text">Already have an account?{' '}
+          <Link to="/login" className="link">Log in</Link>
         </p>
       </div>
     </div>

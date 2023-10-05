@@ -13,6 +13,7 @@ function Logout() {
         });
 
         if (response.ok) {
+          window.localStorage.removeItem("x_user");
           navigate('/login');
         } else {
           console.error('Logout failed');
